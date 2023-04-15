@@ -121,7 +121,7 @@ void loop(){
   display.setCursor(10,1);
   display.setTextSize(2);
   display.print("CORECHAMP");
-  delay(100);
+  
   Serial.print(digitalRead(R_S));
   Serial.println(digitalRead(L_S));
   Serial.println(" ");
@@ -129,7 +129,7 @@ if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 0)){forward();}   //if Right Se
 if((digitalRead(R_S) == 1)&&(digitalRead(L_S) == 0)){turnRight();} //if Right Sensor is Black and Left Sensor is White then it will call turn Right function  
 if((digitalRead(R_S) == 0)&&(digitalRead(L_S) == 1)){turnLeft();}  //if Right Sensor is White and Left Sensor is Black then it will call turn Left function
 if((digitalRead(R_S) == 1)&&(digitalRead(L_S) == 1)){Stop();} //if Right Sensor and Left Sensor are at Black color then it will call Stop function
-delay(500);}
+delay(10);}
 void forward(){  //forword
 digitalWrite(RightBackward, LOW); //Right Motor forword Pin 
 digitalWrite(RightForward, HIGH);  //Right Motor backword Pin 
